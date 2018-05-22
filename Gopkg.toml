@@ -26,8 +26,8 @@
   version = "~1.0.0"
 
 [[constraint]]
-  name = "github.com/chewxy/math32"
-  version = "~1.0.0"
+  name = "github.com/partydb/math32"
+  branch = "fix-gomobile"
 
 [[constraint]]
   branch = "master"
