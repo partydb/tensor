@@ -114,7 +114,7 @@ func (t *Dense) Norm(ord NormOrder, axes ...int) (retVal *Dense, err error) {
 			case Float64:
 				retVal.SetF64(0, math.Sqrt(retVal.GetF64(0)))
 			case Float32:
-				retVal.SetF32(0, math32.Sqrt(retVal.GetF32(0)))
+				retVal.SetF32(0, math32.MobileSqrt(retVal.GetF32(0)))
 			}
 			t.AP = backup
 			return

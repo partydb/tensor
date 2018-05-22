@@ -347,7 +347,7 @@ func CubeC128(a []complex128) {
 
 func ExpF32(a []float32) {
 	for i := range a {
-		a[i] = math32.Exp(a[i])
+		a[i] = math32.MobileExp(a[i])
 	}
 }
 
@@ -395,7 +395,7 @@ func TanhC128(a []complex128) {
 
 func LogF32(a []float32) {
 	for i := range a {
-		a[i] = math32.Log(a[i])
+		a[i] = math32.MobileLog(a[i])
 	}
 }
 
@@ -455,7 +455,7 @@ func Log10C128(a []complex128) {
 
 func SqrtF32(a []float32) {
 	for i := range a {
-		a[i] = math32.Sqrt(a[i])
+		a[i] = math32.MobileSqrt(a[i])
 	}
 }
 
@@ -491,7 +491,7 @@ func CbrtF64(a []float64) {
 
 func InvSqrtF32(a []float32) {
 	for i := range a {
-		a[i] = float32(1) / math32.Sqrt(a[i])
+		a[i] = float32(1) / math32.MobileSqrt(a[i])
 	}
 }
 
@@ -1350,7 +1350,7 @@ func ExpIterF32(a []float32, ait Iterator) (err error) {
 			break
 		}
 		if validi {
-			a[i] = math32.Exp(a[i])
+			a[i] = math32.MobileExp(a[i])
 		}
 	}
 	return
@@ -1470,7 +1470,7 @@ func LogIterF32(a []float32, ait Iterator) (err error) {
 			break
 		}
 		if validi {
-			a[i] = math32.Log(a[i])
+			a[i] = math32.MobileLog(a[i])
 		}
 	}
 	return
@@ -1620,7 +1620,7 @@ func SqrtIterF32(a []float32, ait Iterator) (err error) {
 			break
 		}
 		if validi {
-			a[i] = math32.Sqrt(a[i])
+			a[i] = math32.MobileSqrt(a[i])
 		}
 	}
 	return
@@ -1710,7 +1710,7 @@ func InvSqrtIterF32(a []float32, ait Iterator) (err error) {
 			break
 		}
 		if validi {
-			a[i] = float32(1) / math32.Sqrt(a[i])
+			a[i] = float32(1) / math32.MobileSqrt(a[i])
 		}
 	}
 	return
